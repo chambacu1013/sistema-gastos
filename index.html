@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Gastos</title>
+    <link rel="stylesheet" href="estilo.css" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#2196f3" />
+  </head>
+  <body>
+    <h1>🧾 Sistema de Gastos</h1>
+
+    <form id="form-gasto">
+      <input type="text" id="nombre" placeholder="Nombre del gasto" required />
+      <input type="number" id="cantidad" placeholder="Cantidad" required />
+      <select id="categoria" required>
+        <option value="">Categoría</option>
+        <option value="comida">Comida</option>
+        <option value="transporte">Transporte</option>
+        <option value="hogar">Hogar</option>
+        <option value="otros">Otros</option>
+      </select>
+      <button type="submit">Agregar gasto</button>
+    </form>
+
+    <h2>🧮 Gastos registrados:</h2>
+    <ul id="lista-gastos"></ul>
+
+    <h3>Total gastado: $<span id="total">0</span></h3>
+    <label for="filtro">Filtrar por categoría:</label>
+    <select id="filtro">
+      <option value="">--Todas--</option>
+      <option value="comida">Comida</option>
+      <option value="transporte">Transporte</option>
+      <option value="hogar">Hogar</option>
+      <option value="otros">Otros</option>
+    </select>
+
+    <script src="script.js">
+              if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js')
+            .then(reg => console.log("✅ Service Worker registrado"))
+            .catch(err => console.error("❌ Error al registrar SW:", err));
+        });
+      }
+    </script>
+  </body>
+</html>
