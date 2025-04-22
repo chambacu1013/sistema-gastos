@@ -19,8 +19,7 @@ Desarrollado con **HTML, CSS, JavaScript** y convertido en **Progressive Web App
 
 ## 🖼️ Vista previa
 
-![screenshot](https://user-images.githubusercontent.com/your-user-id/sistema-gastos-demo.png)  
-_(puedes agregar una imagen real o captura de pantalla del sitio aquí)_
+![demo](demo-sistema-gastos.gif)
 
 ---
 
